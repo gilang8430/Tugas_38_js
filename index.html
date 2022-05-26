@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      .merah{
+        color: red;
+      }
+    </style>
+    <title>belajar javascript</title>
+  </head>
+  <body>
+    <button type="button" onclick="klik()" name="button">jalankan</button>
+    <br>
+    <br>
+    <hr>
+    Atribut <b>removeNamedItem()</b> : <br>
+    <input value="inputan">
+    <hr>
+    Atribut <b>setNamedItem()</b>: <br>
+    <i>contoh</i>
+    <hr>
+    Atribut <b>value()</b>:
+    <p id="google">contoh</p>
+    <hr>
+    <script type="text/javascript">
+      function klik(){
+        var a = document.getElementsByTagName("input")[0];
+        a.attributes.removeNamedItem("value");
+        var b = document.getElementsByTagName("i")[0];
+        var c = document.createAttribute("class");
+        c.value = "merah";
+        b.attributes.setNamedItem(c);
+        var d = document.getElementsByTagName("button")[0];
+        var e = d.attributes[2].value
+        document.getElementById("google").innerHTML = e;
+      }
+    </script>
+  </body>
+</html>
